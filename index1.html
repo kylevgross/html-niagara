@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Page title goes here-->
+ <title>ASR Health Benefits</title>
+
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+ 
+ <!-- Link to stylesheet-->
+ <link href="file:^graphics/css/style.css" rel="stylesheet" type="text/css" media="all">
+ <!-- Link to js files for weather and nav bar-->
+
+ <script src="file:^Graphics/js/jquery-3.1.1.min.js" type="text/javascript"></script>
+ <script src="file:^Graphics/js/script.js"></script>
+ <script src="file:^Graphics/js/weather.js"></script>
+ <script src="file:^Graphics/js/jquery.simpleWeather.min.js" type="text/javascript"></script>
+ <!-- <script src="module://bajaScript/rc/env/browser.js?version=1449701027522" type="text/javascript"></script> -->
+
+ </script>
+  <script type='text/javascript'  src='file:^graphics/js/require.js'></script>
+  
+  </head>
+
+<!-- begin body-->
+
+<body>
+
+  <div id="header">
+  <!-- copy link to site logo here, if yours is named "logo.png" there is no need to edit this-->
+     <div id="header-image" ><a href="file:^graphics/home/index.html|view:web:FileDownloadView"><img id="logo" src="file:^graphics/graphicimages/ASR.png" alt="ASR Health Benefits"></a></div>
+     
+     <!-- username/logout link and weather info, nothing here needs to be changed-->
+
+     <div id="header-info">
+      <div id="header-info-username">
+     &nbsp; 
+       <div class="header-info-username ellipsis"><a href="/logout" target="_self">Log Out</a>
+       </div>
+      </div>
+      <div  class="header-info-logout">
+        <a href="/logout" target="_self">Log Out</a>
+      </div>
+         <div title="Click here to log out" id="header-info-arrow-down">▼
+         </div>
+         <div id="header-info-arrow-up">▲
+         </div>
+      <div id="weather"></div>
+      </div>
+      </div>
+      
+<!-- Begin responsive nav bar-->
+<!-- all href targets must ="hx" to open in iframe below-->
+<div id='cssmenu'>
+<ul>
+  
+   <!-- this link does not have target="hx" so the link loads in the whole browser window, 
+   this can be useful when using multiple html index pages (multiple user views, buildings, etc)
+   and can also be used to link to external webpages or reloading the main page like in this case-->
+   <li class><a href='file:^graphics/home/index.html|view:web:FileDownloadView'><span>Home</span></a>
+   </li>
+   
+   <li class><a href='#'><span>Floorplans ▼</span></a>
+   <ul>
+   <li class><a target="hx" href='station:|slot:/Drivers/Basement_Floorplan'><span>Basement Level </span></a></li>
+   <li class><a target="hx" href='station:|slot:/Drivers/ASRMainLevelFloorplan'><span>Main Level </span></a></li>
+   <li class><a target="hx" href='station:|slot:/Drivers/UpperLevelFloorplan'><span>Upper Level </span></a></li>
+   </ul>
+   </li>
+   
+    <!-- this is a dropdown list where the main button is NOT a link-->
+   <li class><a href='#'><span>AHU's/MUA's ▼</span></a>
+   <ul>
+   <li class><a target="hx" href='station:|slot:/Drivers/LonNetwork/AHU_02'><span>AHU-2</span></a></li>
+   <li class><a target="hx" href='station:|slot:/Drivers/LonNetwork/AHU_01'><span>AHU-6</span></a></li>
+   <li class><a target="hx" href='station:|slot:/Drivers/LonNetwork/MUA_01'><span>MUA-1</span></a></li>
+   </ul>
+   </li>
+   
+  
+   <li class><a href='#'><span>Water Systems ▼</span></a>
+   <ul>
+   <li class><a target="hx" href='station:|slot:/Drivers/LonNetwork/HotWaterSystem'><span>Hot Water System</span></a></li>
+   <li class><a target="hx" href='station:|slot:/Drivers/LonNetwork/CoolingSystem'><span>Chilled Water System</span></a></li>
+   </ul>
+   </li>
+   
+     
+    <!-- this is a dropdown list where the main button is NOT a link-->
+   <li class><a href='#'><span>Fan Coil Units ▼</span></a>
+   <ul>
+   <li class><a href='#'><span>Basement Units ▼</span></a>
+   <ul>
+   <li class><a target="hx" href='station:|slot:/Drivers/LonNetwork/FCU_36'><span>FCU-36</span></a></li>
+   </ul>
+   <li class><a href='#'><span>Main Level Units ▼</span></a>
+   <ul>
+   <li class><a target="hx" href='station:|slot:/Drivers/LonNetwork/FCU_06'><span>FCU-6</span></a></li>
+   <li class><a target="hx" href='station:|slot:/Drivers/LonNetwork/FCU_07'><span>FCU-7</span></a></li>
+   <li class><a target="hx" href='station:|slot:/Drivers/LonNetwork/FCU_8'><span>FCU-8</span></a></li>
+   <li class><a target="hx" href='station:|slot:/Drivers/LonNetwork/FCU_09'><span>FCU-9</span></a></li>
+   <li class><a target="hx" href='station:|slot:/Drivers/LonNetwork/FCU_10'><span>FCU-10</span></a></li>
+   <li class><a target="hx" href='station:|slot:/Drivers/LonNetwork/FCU_11'><span>FCU-11</span></a></li>
+   <li class><a target="hx" href='station:|slot:/Drivers/LonNetwork/FCU_12'><span>FCU-12</span></a></li>
+   <li class><a target="hx" href='station:|slot:/Drivers/LonNetwork/FCU_13'><span>FCU-13</span></a></li>
+   <li class><a target="hx" href='station:|slot:/Drivers/LonNetwork/FCU_14'><span>FCU-14</span></a></li>
+   <li class><a target="hx" href='station:|slot:/Drivers/LonNetwork/FCU_15'><span>FCU-15</span></a></li>
+   <li class><a target="hx" href='station:|slot:/Drivers/LonNetwork/FCU_16'><span>FCU-16</span></a></li>
+   <li class><a target="hx" href='station:|slot:/Drivers/LonNetwork/FCU_17'><span>FCU-17</span></a></li>
+   <li class><a target="hx" href='station:|slot:/Drivers/LonNetwork/FCU_34'><span>FCU-34</span></a></li>
+   <li class><a target="hx" href='station:|slot:/Drivers/LonNetwork/FCU_35'><span>FCU-35</span></a></li>
+   </ul>
+   <li class><a href='#'><span>Upper Level Units ▼</span></a>
+   <ul>
+   <li class><a target="hx" href='station:|slot:/Drivers/LonNetwork/FCU_18'><span>FCU-18</span></a></li>
+   <li class><a target="hx" href='station:|slot:/Drivers/LonNetwork/FCU_19'><span>FCU-19</span></a></li>
+   <li class><a target="hx" href='station:|slot:/Drivers/LonNetwork/FCU_20'><span>FCU-20</span></a></li>
+   <li class><a target="hx" href='station:|slot:/Drivers/LonNetwork/FCU_21'><span>FCU-21</span></a></li>
+   <li class><a target="hx" href='station:|slot:/Drivers/LonNetwork/FCU_22'><span>FCU-22</span></a></li>
+   <li class><a target="hx" href='station:|slot:/Drivers/LonNetwork/FCU_23'><span>FCU-23</span></a></li>
+   <li class><a target="hx" href='station:|slot:/Drivers/LonNetwork/FCU_24'><span>FCU-24</span></a></li>
+   <li class><a target="hx" href='station:|slot:/Drivers/LonNetwork/FCU_25'><span>FCU-25</span></a></li>
+   <li class><a target="hx" href='station:|slot:/Drivers/LonNetwork/FCU_26'><span>FCU-26</span></a></li>
+   <li class><a target="hx" href='station:|slot:/Drivers/LonNetwork/FCU_27'><span>FCU-27</span></a></li>
+   <li class><a target="hx" href='station:|slot:/Drivers/LonNetwork/FCU_28'><span>FCU-28</span></a></li>
+   <li class><a target="hx" href='station:|slot:/Drivers/LonNetwork/FCU_29'><span>FCU-29</span></a></li>
+   <li class><a target="hx" href='station:|slot:/Drivers/LonNetwork/FCU_30'><span>FCU-30</span></a></li>
+   <li class><a target="hx" href='station:|slot:/Drivers/LonNetwork/FCU_31'><span>FCU-31</span></a></li>
+   <li class><a target="hx" href='station:|slot:/Drivers/LonNetwork/FCU_32'><span>FCU-32</span></a></li>
+   <li class><a target="hx" href='station:|slot:/Drivers/LonNetwork/FCU_33'><span>FCU-33</span></a></li>
+   </ul>
+   <li class><a href='#'><span>HCU's ▼</span></a>
+   <ul>
+   <li class><a target="hx" href='station:|slot:/Drivers/LonNetwork/HC_01'><span>HCU-1</span></a></li>
+   <li class><a target="hx" href='station:|slot:/Drivers/LonNetwork/HC_02'><span>HCU-2</span></a></li>
+   <li class><a target="hx" href='station:|slot:/Drivers/LonNetwork/HC_03'><span>HCU-3</span></a></li>
+   <li class><a target="hx" href='station:|slot:/Drivers/LonNetwork/HC_04'><span>HCU-4</span></a></li>
+   </ul>
+   </li>
+   </ul>
+
+   <li class><a href='#'><span>Schedules ▼</span></a>
+   <ul>
+   <li class><a target="hx" href='station:|slot:/Drivers/LonNetwork/AHU_01/points/GraphicPoints/AHU$2d01Schedule'><span>AHU Schedule</span></a></li>
+   <li class><a target="hx" href='station:|slot:/Drivers/LonNetwork/FCUSchedule'><span>FCU Schedule</span></a></li>
+   <li class><a target="hx" href='station:|slot:/Drivers/LonNetwork/NightOverrideSchedule'><span>Night Override Schedule</span></a></li>
+   </ul>
+   </li>
+   
+    <!-- these are links with no dropdown menus, note the history links to a specific view-->
+   <li><a target="hx" href='history:|view:webChart:ChartWidget'><span>Trending</span></a> 
+   </li>
+   
+   
+ <!-- this is the last link, so it must contain the class='last' tag - this is required for the nav bar to scale properly -->
+   <!-- tYou will also notice the span does not contain text like the other links, 
+   this is because the bajascript at the bottom of the page dynamically changes the text/color based on the number of alarms-->      
+   <li class='last'><a target="hx" href='station:|slot:/Services/AlarmService/ConsoleRecipient'><span id="AllAlarms" class="AllAlarms" ></span>Alarms</a>
+   
+   </li>
+   
+</ul>
+</div>
+<!--Link to main px/hx homepage you would like to use here-->
+<div>
+ <iframe class="hx" name="hx" id="appletcontainer" src="station:|slot:/Drivers/Homepage" ></iframe>
+</div>
+
+
+<!--begin bajascript-->
+<script type="text/javascript">
+
+exports = function() {
+
+require(['baja!', 'dialogs'], function (baja, dialogs) {
+
+        <!--Use Alarm count to change color/number of shown alarms on nav bar-->
+        var allAlarmSub = new baja.Subscriber(); 
+        
+            allAlarmSub.attach("changed", function(prop) {
+            
+            document.getElementById("AllAlarms").innerHTML = "All Alarms (" + this.getOut().getValue() + ")";
+              
+                  var val = this.getOut().getValue();
+                  
+                 if (val > 0){
+                document.getElementById("AllAlarms").style.color = "#FF3333";}
+                else {
+                  document.getElementById("AllAlarms").style.color = "#fff";
+            } 
+
+
+            });
+             <!--this is the link to the alarm count on the alarm service wiresheet, either name it AllAlarms or copy your name here-->
+            baja.Ord.make("station:|slot:/Services/AlarmService/AllAlarmCount").get({
+               subscriber: allAlarmSub
+            });
+         
+           
+      <!--this gets the username and shows it in the header and controls the logout animation-->
+     //get username & append to header
+    $(".header-info-username").empty().append(baja.getUserName());
+    $("#header-info-arrow-down").on("click", function () {
+     $("#header-info-arrow-down").css( "display", "none" );
+     $("#header-info-arrow-up").css( "display", "table-cell" );
+     $(".header-info-username").animate({top: "-100%"}, 150, function() {
+      $(".header-info-logout").animate({top: 20}, 150);
+     });
+    });
+    //logoff code
+    $("#header-info-arrow-up").on("click", function () {
+     $("#header-info-arrow-up").css( "display", "none" );
+     $("#header-info-arrow-down").css( "display", "table-cell" );
+     $(".header-info-logout").animate({top: "-100%"}, 150, function() {
+      $(".header-info-username").animate({top: 20}, 150);
+     });
+    });
+
+});
+ 
+}
+
+</script>
+</body>
+</html>
